@@ -1,0 +1,40 @@
+body{
+	background-color: green;
+}	
+img{
+	width: 100%;	
+}
+
+/* The content div soround
+  * every thing in the body
+  * The css make content  smaller than the body itself
+  * and centret.
+  */
+#content {
+	width: 75%;
+	margin: auto;
+}
+
+#bleDeviceList{
+	
+}	
+#messageInput{
+	
+}
+#list{
+	background-color: red;
+}
+
+/* width will be 100% of content */
+#refreshButton{
+	width: 100%;
+}
+#sendButton{
+	width: 100%;
+}
+#ledOnButton{
+	width: 100%;
+}
+#ledOffButton{
+	width: 100%;
+}

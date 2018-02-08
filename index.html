@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<link rel = "stylesheet" type = "text/css" href = "format.css">   <!-- Link to style sheet named format.css -->
+		<script type="text/javascript" src="cordova.js"></script> 
+        <script type="text/javascript" src="js/index.js"></script>
+        <title>Beacon</title>
+    </head>
+     <body onload="onLoad()">
+
+		<h1>Bluifruit test</h1>
+           
+		<ul id="bleDeviceList"> </ul>  
+		<button id="refreshButton" onClick = "refreshDeviceList()">Refresh</button>
+		<br>
+		<div id="statusDiv">Status: Disconnected</div>
+		<div id="bleId">DeviceId:</div>
+		<div id="debugDiv"></div>
+		<br><br>
+		<button id="ledOnButton" onclick = "data('1')">Set led ON</button>
+		<br><br>
+		<button id="ledOffButton" onclick = "data('0')">Set Led Off</button>
+		<br><br><br>
+		<input type="text" id="messageInput" value="Hello"/>
+		<br>
+		<button id="sendButton" onclick = "sendData()">Send</button>
+		<br>
+		
+		<br>
+		<div id="sendDiv"></div>
+		<br><br>
+		<button id="disconnectButton"onClick="disconnect()">Disconnect</button>
+		<div id="receiveDiv"></div>
+    </body>
+</html>
+			
+
