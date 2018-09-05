@@ -81,10 +81,6 @@ void setup(void)
 
   ble.verbose(false);  // debug info is a little annoying after this point!
 
-  /* Wait for connection */
-  while (! ble.isConnected()) {
-    delay(500);
-  }
 
   Serial.println(F("******************************"));
 
@@ -97,11 +93,15 @@ void setup(void)
   }
 
   //Give module a new name
-  ble.println("AT+GAPDEVNAME=LONE"); // named LONE
+  ble.println("AT+GAPDEVNAME=TLONE"); // named TLONE
 
   // Check response status
   ble.waitForOK();
 
+  /* Wait for connection */
+  while (! ble.isConnected()) {
+    delay(500);
+  }
   // Set module to DATA mode
   Serial.println( F("Switching to DATA mode!") );
   ble.setMode(BLUEFRUIT_MODE_DATA);
