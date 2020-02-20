@@ -56,12 +56,10 @@ function refreshDeviceList(){
 
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
-		//if(device.name == "LONE"){      //indsæt evt. en if-sætning, så kun egen bluifruit modul sættes på listen
 		var listItem = document.createElement('li'),
 		html = device.name+ "," + device.id;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
-		//} //slut tuborgparentes til mulig if-sætning
 }
 
 
@@ -70,7 +68,7 @@ function conn(){
 	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
 	ConnDeviceId = deviceTouchArr[1];
-	document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
+	//document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
 	ble.connect(ConnDeviceId, onConnect, onConnError);
  }
  
@@ -92,20 +90,22 @@ function onConnError(){
 }
 
 function data(txt){
-	messageInput.value = txt;
+	GemtInput.value = txt;
+	sendData();
 }	
 
 function sendData() { // send data to Arduino
-	 var data = stringToBytes(messageInput.value);
+	var data = stringToBytes(GemtInput.value)
 	ble.writeWithoutResponse(ConnDeviceId, blue.serviceUUID, blue.txCharacteristic, data, onSend, onError);
 }
 	
 function onSend(){
-	document.getElementById("sendDiv").innerHTML = "Sent: " + messageInput.value + "<br/>";
+	document.getElementById("sendDiv").innerHTML = "Sent: " + GemtInput.value + "<br/>";
 }
 
+
 function disconnect() {
-	ble.disconnect(deviceId, onDisconnect, onError);
+	ble.disconnect(ConnDeviceId, onDisconnect, onError);
 }
 
 function onDisconnect(){

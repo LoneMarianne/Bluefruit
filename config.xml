@@ -1,18 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget 
-	id="dk.kea.bluefruit-2" 
-	version="0.0.1" 
-	xmlns="http://www.w3.org/ns/widgets" 
-	xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="dk.kea.BluifruitTest" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-    <name>Bluifruit-2</name>
+    <name>Bluifruit test</name>
     <description>
         A sample app from a phone  BLE hardware.
     </description>
     <author >
          Lone Østerlund based on an example by Don Coleman: 
 		 https://github.com/don/cordova-plugin-ble-central 
-		 revideret til IoS af Rico Ghanem
+
     </author>
 
     <content src="index.html" />
@@ -27,7 +23,7 @@
     <engine name="ios" spec="^4.5.3" />
 
 	
-	<preference name="phonegap-version" value="cli-6.5.0" />
+	<preference name="phonegap-version" value="cli-9.0.0" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
