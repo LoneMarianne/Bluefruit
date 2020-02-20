@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="dk.kea.BluifruitTest" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-    <name>Bluifruit test</name>
+    <name>Bluifruit</name>
     <description>
         A sample app from a phone  BLE hardware.
     </description>
